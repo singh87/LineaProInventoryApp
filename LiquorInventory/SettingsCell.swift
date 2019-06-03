@@ -37,6 +37,7 @@ class SettingsCell: UITableViewCell {
         addSubview(switchControl)
         switchControl.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         switchControl.rightAnchor.constraint(equalTo: rightAnchor, constant: -12).isActive = true
+        switchControl.transform = CGAffineTransform(scaleX: 0.80, y: 0.80)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,12 +80,12 @@ class SettingsCell: UITableViewCell {
             }
 //        case ScannerSettings.setTimeout:
 //            return false
-        case ScannerSettings.resetBarcodeEngine:
-            return false
+//        case ScannerSettings.resetBarcodeEngine:
+//            return false
 //        case ScannerSettings.scanEngineFirmware:
 //            return false
-        case ScannerSettings.scannerIllumination:
-            return false
+//        case ScannerSettings.scannerIllumination:
+//            return false
         default: return true
         }
    return false
@@ -112,12 +113,12 @@ class SettingsCell: UITableViewCell {
             }
 //        case ScannerSettings.setTimeout:
 //            return false
-        case ScannerSettings.resetBarcodeEngine:
-            return false
+//        case ScannerSettings.resetBarcodeEngine:
+//            return false
 //        case ScannerSettings.scanEngineFirmware:
 //            return false
-        case ScannerSettings.scannerIllumination:
-            return false
+//        case ScannerSettings.scannerIllumination:
+//            return false
         default: return true
         }
         return true
@@ -145,12 +146,12 @@ class SettingsCell: UITableViewCell {
             }
 //        case ScannerSettings.setTimeout:
 //            return false
-        case ScannerSettings.resetBarcodeEngine:
-            return false
+//        case ScannerSettings.resetBarcodeEngine:
+//            return false
 //        case ScannerSettings.scanEngineFirmware:
 //            return false
-        case ScannerSettings.scannerIllumination:
-            return false
+//        case ScannerSettings.scannerIllumination:
+//            return false
         default: return true
         }
         return false

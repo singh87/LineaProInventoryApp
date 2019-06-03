@@ -39,7 +39,7 @@ class Settings: UIViewController{
         tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 60
+        tableView.rowHeight = 50
         
         tableView.register(SettingsCell.self, forCellReuseIdentifier: reuseIdentifier)
         view.addSubview(tableView)

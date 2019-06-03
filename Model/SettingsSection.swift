@@ -29,9 +29,9 @@ enum ScannerSettings: Int, CaseIterable, SectionType {
     case beepUponScan
     case scanButton
 //    case setTimeout
-    case resetBarcodeEngine
+//    case resetBarcodeEngine
 //    case scanEngineFirmware
-    case scannerIllumination
+//    case scannerIllumination
     
     var containsSwitch: Bool {
         switch self{
@@ -40,9 +40,9 @@ enum ScannerSettings: Int, CaseIterable, SectionType {
             case .beepUponScan: return true
             case .scanButton: return true
 //            case .setTimeout: return false
-            case .resetBarcodeEngine: return true
+//            case .resetBarcodeEngine: return true
 //            case .scanEngineFirmware: return true
-            case .scannerIllumination: return true
+//            case .scannerIllumination: return true
         }
     }
     
@@ -53,9 +53,9 @@ enum ScannerSettings: Int, CaseIterable, SectionType {
         case .beepUponScan: return "Beep Upon Scan"
         case .scanButton: return "Scan Button"
 //        case .setTimeout: return "Set Timeout in Minutes"
-        case .resetBarcodeEngine: return "Reset Barcode Engine"
+//        case .resetBarcodeEngine: return "Reset Barcode Engine"
 //        case .scanEngineFirmware: return "Scan Engine Firmware Info"
-        case .scannerIllumination: return "Scanner Illumination"
+//        case .scannerIllumination: return "Scanner Illumination"
         }
     }
 }
