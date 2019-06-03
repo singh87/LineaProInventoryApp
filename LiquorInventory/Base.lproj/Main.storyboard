@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w8t-v1-STh">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="Ugy-fj-ZAK">
+            <objects>
+                <viewController id="jYv-Kw-dQb" customClass="Settings" customModule="LiquorInventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9H0-Q0-w2D" customClass="SettingsCell" customModule="LiquorInventory" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0hY-V3-7XW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="FvZ-yO-R4b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaQ-e2-PMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4777.5" y="-65.492957746478879"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m2m-NA-DS0">
+            <objects>
+                <viewController id="7iv-Oj-y0y" customClass="ViewController" customModule="LiquorInventory" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PDf-bd-HDt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Enter a Barcode" translatesAutoresizingMaskIntoConstraints="NO" id="jnX-Wc-EwL">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7iv-Oj-y0y" id="zl9-Ur-sYy"/>
+                                </connections>
+                            </searchBar>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nka-QP-4wh">
+                                <rect key="frame" x="20" y="134" width="280" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanButton:" destination="7iv-Oj-y0y" eventType="touchUpInside" id="aFf-gS-F6k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nka-QP-4wh" firstAttribute="top" secondItem="PDf-bd-HDt" secondAttribute="topMargin" constant="70" id="OJ1-Kk-eH0"/>
+                            <constraint firstItem="nka-QP-4wh" firstAttribute="leading" secondItem="qtY-5d-aaM" secondAttribute="leading" constant="20" id="oOD-cM-ob0"/>
+                            <constraint firstItem="qtY-5d-aaM" firstAttribute="trailing" secondItem="nka-QP-4wh" secondAttribute="trailing" constant="20" id="rIf-By-VtF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qtY-5d-aaM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WHa-F2-ZWw"/>
+                    <connections>
+                        <outlet property="s_bar" destination="jnX-Wc-EwL" id="0I8-xj-C5V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BN2-h6-5J7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="-65"/>
+        </scene>
+        <!--Product View Controller-->
+        <scene sceneID="ATH-AE-qVC">
+            <objects>
+                <viewController storyboardIdentifier="ProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ITU-oI-nak" customClass="ProductViewController" customModule="LiquorInventory" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bYb-et-oJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-hC-ho4">
+                                <rect key="frame" x="10" y="200" width="300" height="25.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul7-wn-nXk">
+                                <rect key="frame" x="26" y="245.5" width="59" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tol-M9-qTv">
+                                <rect key="frame" x="10" y="245.5" width="14" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDK-PL-qUp">
+                                <rect key="frame" x="113.5" y="457" width="93" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add to List"/>
+                                <connections>
+                                    <action selector="p_add:" destination="ITU-oI-nak" eventType="touchUpInside" id="t8F-vA-v4y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zag-gn-gcY">
+                                <rect key="frame" x="84.5" y="457" width="151" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Remove from List">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="p_remove:" destination="ITU-oI-nak" eventType="touchUpInside" id="zG4-Gc-Ys3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8SG-Rc-21s">
+                                <rect key="frame" x="10" y="40" width="300" height="152"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6WD-hC-ho4" firstAttribute="top" secondItem="8SG-Rc-21s" secondAttribute="bottom" constant="8" id="230-dz-mwC"/>
+                            <constraint firstItem="Ul7-wn-nXk" firstAttribute="leading" secondItem="Tol-M9-qTv" secondAttribute="trailing" constant="2" id="2JT-Hl-dXs"/>
+                            <constraint firstItem="rgi-VF-sEP" firstAttribute="trailing" secondItem="8SG-Rc-21s" secondAttribute="trailing" constant="10" id="3ZK-v6-1Sx"/>
+                            <constraint firstItem="Tol-M9-qTv" firstAttribute="leading" secondItem="rgi-VF-sEP" secondAttribute="leading" constant="10" id="8WN-vb-CKF"/>
+                            <constraint firstItem="rgi-VF-sEP" firstAttribute="trailing" secondItem="6WD-hC-ho4" secondAttribute="trailing" constant="10" id="BTp-hW-WCK"/>
+                            <constraint firstItem="Tol-M9-qTv" firstAttribute="top" secondItem="6WD-hC-ho4" secondAttribute="bottom" constant="20" id="FPd-cu-cbc"/>
+                            <constraint firstItem="6WD-hC-ho4" firstAttribute="leading" secondItem="rgi-VF-sEP" secondAttribute="leading" constant="10" id="IP9-sv-PIV"/>
+                            <constraint firstItem="CDK-PL-qUp" firstAttribute="centerX" secondItem="bYb-et-oJ2" secondAttribute="centerX" id="M7g-v5-6Aa"/>
+                            <constraint firstItem="rgi-VF-sEP" firstAttribute="bottom" secondItem="CDK-PL-qUp" secondAttribute="bottom" constant="75" id="TQJ-FU-j4V"/>
+                            <constraint firstItem="6WD-hC-ho4" firstAttribute="top" secondItem="rgi-VF-sEP" secondAttribute="top" constant="180" id="UcX-sG-GTa"/>
+                            <constraint firstItem="zag-gn-gcY" firstAttribute="centerX" secondItem="bYb-et-oJ2" secondAttribute="centerX" id="Wuy-KW-YR4"/>
+                            <constraint firstItem="Ul7-wn-nXk" firstAttribute="top" secondItem="6WD-hC-ho4" secondAttribute="bottom" constant="20" id="ZF4-bO-VMo"/>
+                            <constraint firstItem="8SG-Rc-21s" firstAttribute="leading" secondItem="rgi-VF-sEP" secondAttribute="leading" constant="10" id="g8u-Sa-xYf"/>
+                            <constraint firstItem="rgi-VF-sEP" firstAttribute="bottom" secondItem="zag-gn-gcY" secondAttribute="bottom" constant="75" id="svp-S7-6kP"/>
+                            <constraint firstItem="8SG-Rc-21s" firstAttribute="top" secondItem="rgi-VF-sEP" secondAttribute="top" constant="20" id="v8V-ti-n6P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rgi-VF-sEP"/>
+                    </view>
+                    <connections>
+                        <outlet property="p_add_button" destination="CDK-PL-qUp" id="RyT-pL-EDZ"/>
+                        <outlet property="p_image" destination="8SG-Rc-21s" id="RA3-8g-PZd"/>
+                        <outlet property="p_name" destination="6WD-hC-ho4" id="BcT-L6-oPY"/>
+                        <outlet property="p_price" destination="Ul7-wn-nXk" id="gQk-Ms-cT4"/>
+                        <outlet property="p_remove_button" destination="zag-gn-gcY" id="yqp-9w-3f2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUI-5F-dyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3155.625" y="-65.492957746478879"/>
+        </scene>
+        <!--Product Add View Controller-->
+        <scene sceneID="O85-Dr-dTT">
+            <objects>
+                <viewController storyboardIdentifier="ProductAddViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GG0-gL-crm" customClass="ProductAddViewController" customModule="LiquorInventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucA-vG-jjS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWZ-Dc-FML" customClass="CustomTextField" customModule="LiquorInventory" customModuleProvider="target">
+                                <rect key="frame" x="10" y="200" width="300" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-Aa-7Y4">
+                                <rect key="frame" x="10" y="241" width="56.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qZy-Ne-Hhv" customClass="CustomTextField" customModule="LiquorInventory" customModuleProvider="target">
+                                <rect key="frame" x="76.5" y="241" width="229" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="WRJ-Nj-rdg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dept:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcg-Py-iB6">
+                                <rect key="frame" x="10" y="283.5" width="55" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="WINE, BEER, VODKA..." textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2T-QQ-HzR" customClass="CustomTextField" customModule="LiquorInventory" customModuleProvider="target">
+                                <rect key="frame" x="75" y="284" width="235" height="28"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ani-Dy-aa8">
+                                <rect key="frame" x="10" y="115" width="294" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProductEditViewController"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h2T-QQ-HzR" secondAttribute="trailing" constant="10" id="B54-Ez-ZAi"/>
+                            <constraint firstItem="wcg-Py-iB6" firstAttribute="top" secondItem="kQc-Aa-7Y4" secondAttribute="bottom" constant="15" id="Qkw-XR-TJK"/>
+                            <constraint firstItem="kQc-Aa-7Y4" firstAttribute="leading" secondItem="ZfG-MV-GGk" secondAttribute="leading" constant="10" id="Rl5-ZI-4jc"/>
+                            <constraint firstItem="h2T-QQ-HzR" firstAttribute="top" secondItem="qZy-Ne-Hhv" secondAttribute="bottom" constant="15" id="YnT-7o-UPj"/>
+                            <constraint firstItem="h2T-QQ-HzR" firstAttribute="leading" secondItem="wcg-Py-iB6" secondAttribute="trailing" constant="10" id="ZGP-tU-vqE"/>
+                            <constraint firstItem="wcg-Py-iB6" firstAttribute="leading" secondItem="ZfG-MV-GGk" secondAttribute="leading" constant="10" id="aRY-Q7-mD4"/>
+                            <constraint firstItem="qZy-Ne-Hhv" firstAttribute="leading" secondItem="kQc-Aa-7Y4" secondAttribute="trailing" constant="10" id="d6E-F4-saZ"/>
+                            <constraint firstItem="ZfG-MV-GGk" firstAttribute="trailing" secondItem="UWZ-Dc-FML" secondAttribute="trailing" constant="10" id="gqK-sw-Ywm"/>
+                            <constraint firstItem="UWZ-Dc-FML" firstAttribute="top" secondItem="ZfG-MV-GGk" secondAttribute="top" constant="180" id="iGb-SO-ipv"/>
+                            <constraint firstItem="UWZ-Dc-FML" firstAttribute="leading" secondItem="ZfG-MV-GGk" secondAttribute="leading" constant="10" id="nC3-0S-KZ1"/>
+                            <constraint firstItem="qZy-Ne-Hhv" firstAttribute="top" secondItem="UWZ-Dc-FML" secondAttribute="bottom" constant="15" id="pPS-f3-PIW"/>
+                            <constraint firstItem="kQc-Aa-7Y4" firstAttribute="top" secondItem="UWZ-Dc-FML" secondAttribute="bottom" constant="15" id="xcq-Cl-U0V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZfG-MV-GGk"/>
+                    </view>
+                    <connections>
+                        <outlet property="p_barcode" destination="ani-Dy-aa8" id="Amb-K7-lVn"/>
+                        <outlet property="p_deptId" destination="h2T-QQ-HzR" id="T2M-mC-1cx"/>
+                        <outlet property="p_itemName" destination="UWZ-Dc-FML" id="u1m-eW-peu"/>
+                        <outlet property="p_itemPrice" destination="qZy-Ne-Hhv" id="pZ0-Ux-rdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AZ-XQ-16W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.5" y="1539.0845070422536"/>
+        </scene>
+        <!--Product Edit View Controller-->
+        <scene sceneID="oPZ-30-muu">
+            <objects>
+                <viewController storyboardIdentifier="ProductEditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OQ1-vM-aDa" customClass="ProductEditViewController" customModule="LiquorInventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsQ-3V-DaS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H0Z-GV-aSf" customClass="CustomTextField" customModule="LiquorInventory" customModuleProvider="target">
+                                <rect key="frame" x="10" y="200" width="300" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-Le-ohn">
+                                <rect key="frame" x="10" y="241" width="56.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$999.99" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D51-ea-rUO" customClass="CustomTextField" customModule="LiquorInventory" customModuleProvider="target">
+                                <rect key="frame" x="76.5" y="241" width="229" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="l7d-WT-VVk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dz-yR-iMV">
+                                <rect key="frame" x="127.5" y="464" width="65" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ProductEditViewController"/>
+                        <constraints>
+                            <constraint firstItem="6Dz-yR-iMV" firstAttribute="centerX" secondItem="hsQ-3V-DaS" secondAttribute="centerX" id="2Dc-OM-niT"/>
+                            <constraint firstItem="v7I-Le-ohn" firstAttribute="leading" secondItem="U7Y-XG-lDs" secondAttribute="leading" constant="10" id="778-K9-fau"/>
+                            <constraint firstItem="H0Z-GV-aSf" firstAttribute="top" secondItem="U7Y-XG-lDs" secondAttribute="top" constant="180" id="Avb-gI-K0K"/>
+                            <constraint firstItem="v7I-Le-ohn" firstAttribute="top" secondItem="H0Z-GV-aSf" secondAttribute="bottom" constant="15" id="HCg-so-gjk"/>
+                            <constraint firstItem="H0Z-GV-aSf" firstAttribute="leading" secondItem="U7Y-XG-lDs" secondAttribute="leading" constant="10" id="XUX-tD-Ypo"/>
+                            <constraint firstItem="D51-ea-rUO" firstAttribute="leading" secondItem="v7I-Le-ohn" secondAttribute="trailing" constant="10" id="bf2-Qo-72O"/>
+                            <constraint firstItem="D51-ea-rUO" firstAttribute="top" secondItem="H0Z-GV-aSf" secondAttribute="bottom" constant="15" id="keC-GH-baS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6Dz-yR-iMV" secondAttribute="bottom" constant="75" id="s6J-3H-dMe"/>
+                            <constraint firstItem="U7Y-XG-lDs" firstAttribute="trailing" secondItem="H0Z-GV-aSf" secondAttribute="trailing" constant="10" id="uOy-pE-cjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U7Y-XG-lDs"/>
+                    </view>
+                    <connections>
+                        <outlet property="p_nameTextField" destination="H0Z-GV-aSf" id="lw7-j2-ehz"/>
+                        <outlet property="p_priceTextField" destination="D51-ea-rUO" id="E0n-HY-Dc4"/>
+                        <outlet property="saved_label" destination="6Dz-yR-iMV" id="EKS-US-JNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhn-2H-w9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3156" y="756"/>
+        </scene>
+        <!--Product Add Popup View Controller-->
+        <scene sceneID="iWb-FE-LRX">
+            <objects>
+                <viewController storyboardIdentifier="ProductAddPopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a0s-Xj-gcR" customClass="ProductAddPopupViewController" customModule="LiquorInventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Edq-Mu-GPu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sKU-69-98G">
+                                <rect key="frame" x="40" y="201" width="240" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Not Found!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnl-HS-1Xb">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.20632518038235959" blue="0.10622171711485362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Item?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OME-SS-NdA">
+                                        <rect key="frame" x="0.0" y="77" width="240" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-cc-drC">
+                                        <rect key="frame" x="8" y="128" width="90" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="NO"/>
+                                        <connections>
+                                            <action selector="popup_cancelButton:" destination="a0s-Xj-gcR" eventType="touchUpInside" id="aqD-vq-b06"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-Ct-uUq">
+                                        <rect key="frame" x="142" y="128" width="90" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="YES"/>
+                                        <connections>
+                                            <action selector="popup_confirmButton:" destination="a0s-Xj-gcR" eventType="touchUpInside" id="8va-4a-NEn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.43000856164383561" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="HsJ-px-EH8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzS-Ag-3DG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.5" y="756.33802816901414"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jju-4b-cts">
+            <objects>
+                <tabBarController id="w8t-v1-STh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="guY-a1-mx2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="J88-4u-7Jq" kind="relationship" relationship="viewControllers" id="SME-3p-blS"/>
+                        <segue destination="jYv-Kw-dQb" kind="relationship" relationship="viewControllers" id="9jE-ne-YEY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sL4-WP-YlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="-1185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dDh-uQ-xW6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J88-4u-7Jq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Oph-z0-EQR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F7A-rn-kkt">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7iv-Oj-y0y" kind="relationship" relationship="rootViewController" id="i6y-Ji-H8V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ok7-2i-MZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="-65.492957746478879"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings" width="30" height="30"/>
+    </resources>
+</document>

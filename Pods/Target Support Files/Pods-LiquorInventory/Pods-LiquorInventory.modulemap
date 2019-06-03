@@ -1,0 +1,6 @@
+framework module Pods_LiquorInventory {
+  umbrella header "Pods-LiquorInventory-umbrella.h"
+
+  export *
+  module * { export * }
+}
