@@ -8,4 +8,5 @@ target 'LiquorInventory' do
   # Pods for LiquorInventory
 
   pod 'RealmSwift'
+  pod 'IQKeyboardManagerSwift'
 end
