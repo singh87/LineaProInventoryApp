@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import InfineaSDK
+import IQKeyboardManagerSwift
 
 public var localRealmConfig = Realm.Configuration(
     
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             preloadData()
             defaults.set(true, forKey: "isPreloaded")
         }
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

@@ -22,8 +22,11 @@ class ProductAddViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         p_barcode.text = barcode
         p_itemPrice.delegate = self
+        p_itemPrice.keyboardType = UIKeyboardType.decimalPad
         p_deptId.delegate = self
+        self.p_deptId.autocapitalizationType = UITextAutocapitalizationType.allCharacters
         p_itemName.delegate = self
+        self.p_itemName.autocapitalizationType = UITextAutocapitalizationType.allCharacters
         p_itemPrice.tag = TextFieldTags.Price.rawValue
         p_itemName.tag = TextFieldTags.Name.rawValue
         p_itemName.addTarget(self, action: #selector(giveFeedback), for: .editingChanged)
@@ -72,14 +75,13 @@ class ProductAddViewController: UIViewController, UITextFieldDelegate {
         
         
         try! realm.write {
-            realm.add(product)
+            realm.add(product, update: true)
             print("added")
         }
 
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         switch textField.tag {
         case TextFieldTags.Name.rawValue:
             return true

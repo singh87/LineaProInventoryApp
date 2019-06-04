@@ -22,6 +22,7 @@ class ProductEditViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         p_nameTextField.delegate = self
+        self.p_nameTextField.autocapitalizationType = UITextAutocapitalizationType.allCharacters
         p_priceTextField.delegate = self
         p_nameTextField.tag = TextFieldTags.Name.rawValue
         p_priceTextField.tag = TextFieldTags.Price.rawValue
